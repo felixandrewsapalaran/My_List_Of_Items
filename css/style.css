@@ -1,0 +1,76 @@
+/* Structural Pseudo-classes------------------ */
+
+
+/*So now let's say we only want to target and style the first item in our list. Well, we can use the first child structural pseudo class to do just that.*/
+
+/*let's create a first selector by first targetting an li element followed by the first child pseudo-class. Like I said this selector will target the list element that is the first child of its parent.*/
+
+li:first-child {
+
+    background: #52bab3;
+    color:white;
+
+}
+
+/*Summary: When you refresh the page notice that the first list item in our unordered list is the only one with that aqua green background color and the white text color.*/
+
+
+
+/*So similar to the first child pseudo class, the last child pseudo class, allows us to target an element that's the last child of its parent.*/
+
+/*
+li:last-child {
+
+    background: #52bab3;
+    color:white;
+
+}
+*/
+
+/*Summary: Now you can see how the styles are applied to the very last item only.*/
+
+
+/*But now let's say that we want to remove this unnecessary border here in the last list item. Well we know that we can easily do that with a last child pseudo class.*/
+
+
+li:last-child {
+
+  border: none; /*This value will remove the borrder or line underneat of the item 10*/
+
+}
+
+
+/*Summary: This is realy great because instead of creating a separate class for the first list item to add these colors, or creating a seperate class to remove the border here in the last list item. We can do this in a more effecient way with the first and last child pseudo classes.*/
+
+
+
+
+/*With only child, pseudo class, we can target an element, if it’s the only child of a parent.*/
+
+
+span:only-child { /*if we want to target just the span elements, that are an only child, we can add the span type selector to our pseudo class. So we just added a span type selector here. Now, this works exactly the same way, it's just a lot more specific.*/
+
+  color: #52bab3;
+  font-size: 1.5em;
+}
+
+
+/*Notice how that selector targets the entire unordered list, because as we can see here in our indext.html file the ul element is the only child of the body element element. But if you go back and add another element to the body, so for example this h1 element. Notice how the only-child selector no longer targets the unordered list, because now it's no longer the only-child of the body element. The h1 is now sibling of the ul.*/
+
+
+
+
+
+
+/*Next if we need to target elements, that have no child elements, or content what so ever, we can use the empty structural pseudo class, to just that, target an empty element.*/
+
+
+li:empty  { /*And again, we can make the selector more specific by saying that we only want to target, empty list item element, so right before the empty pseudo class, we are going to add the li seletor.It still going to work the same way nothing will change just being specific.*/
+
+  background-color: tomato;
+}
+
+
+/*Summary: Notice how the only element that turns tomato red, that empty list item. And again, we can make the selector more specific by saying that we only want to target, empty list item element, so right before the empty pseudo class, we are going to add the li seletor.*/
+
+
